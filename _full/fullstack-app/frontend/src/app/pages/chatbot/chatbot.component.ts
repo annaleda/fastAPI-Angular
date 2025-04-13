@@ -21,4 +21,8 @@ export class ChatbotComponent implements OnInit {
     }
   }
 
+  ngOnInit(): void {
+    // codice iniziale, se serve
+  }
+
 }

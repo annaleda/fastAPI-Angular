@@ -5,6 +5,7 @@ WORKDIR /app
 # Copia i file necessari
 COPY requirements.txt .
 
+RUN apt-get update && apt-get install -y gcc libpq-dev
 # Installa le dipendenze
 RUN pip install --no-cache-dir -r requirements.txt
 

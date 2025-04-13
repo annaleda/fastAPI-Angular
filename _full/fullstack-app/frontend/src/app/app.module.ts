@@ -6,8 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './pages//users/users.component';
 import { ChatbotComponent } from './pages/chatbot/chatbot.component';
+import { FormsModule } from '@angular/forms';
 
-@NgModule({  
+@NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
@@ -16,7 +17,8 @@ import { ChatbotComponent } from './pages/chatbot/chatbot.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
