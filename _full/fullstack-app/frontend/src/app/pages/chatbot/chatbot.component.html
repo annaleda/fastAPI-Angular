@@ -1,0 +1,13 @@
+<!-- chatbot.component.html -->
+
+<div class="chatbot">
+  <h2>Chatbot</h2>
+  <div class="chatbox">
+    <div class="message-box">
+      <p><strong>You:</strong> {{ message }}</p>
+      <p><strong>Bot:</strong> {{ response }}</p>
+    </div>
+  </div>
+  <input [(ngModel)]="message" placeholder="Type a message" />
+  <button (click)="sendMessage()">Send</button>
+</div>

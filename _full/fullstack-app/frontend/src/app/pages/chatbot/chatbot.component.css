@@ -1,0 +1,32 @@
+/* chatbot.component.css */
+
+.chatbot {
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.chatbox {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message-box {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}

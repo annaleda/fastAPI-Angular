@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './pages//users/users.component';
+import { ChatbotComponent } from './pages/chatbot/chatbot.component';
 
 @NgModule({  
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
