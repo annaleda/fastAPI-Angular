@@ -1,0 +1,45 @@
+﻿version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"  # Esponi il backend su localhost:8080
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydatabase
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8081:80"  # Esponi il frontend su localhost:8081
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  reverse-proxy:
+    build:
+      context: ./reverse-proxy
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+    depends_on:
+        - frontend
+        - backend
+      
+volumes:
+  pgdata:
+
+
+networks:
+  app-network:
+    driver: bridge
